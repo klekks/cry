@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Futura';
+	src: url(../media/Futura.woff);
+}
+
+/* Жирный */
+@font-face {
+	font-family: 'Futura1';
+	src: url(../media/Futura.woff);
+}

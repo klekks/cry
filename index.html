@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WebCrypter</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Chart.min.css" />
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <div id="preloader">
+      <div id="preloader-img"></div>
+    </div>
+
+    <div id="file-input">
+      <div id="file-input-container">
+        <img src="media/draganddrop.png" alt="Drag&Drop Text File" id="file-input-img">
+        <input id="file-upload" type="file" accept=".txt"/>
+        <label for="file-upload">Choose or Drag&Drop file</label>
+      </div>
+    </div>
+
+    <div id="menu-holder">
+      <a href="#mh-statistics"><div name="mh-statistics" class="active">Statistics</div></a>
+      <a href="#mh-words"><div name="mh-words">Words</div></a>
+      <a href="#mh-letters"><div name="mh-letters">Letters</div></a>
+      <a href="#mh-crypto"><div name="mh-crypto">Crypto</div></a>
+    </div>
+
+    <div id="panel">
+      <div id="obj-mh-statistics" class="panel-obj active">
+        <!-- Put stetistics block here-->
+        <canvas id="myChart" width="9" height="4"></canvas>
+        <h1>It is recommended to perform the replacement according to the pairs of columns.</h1>
+      </div>
+
+      <div id="obj-mh-words" class="panel-obj">
+        <div id="words-table">
+          <table align=center valign=center>
+            <thead>
+              <tr>
+                <th sortby="word">CryptoWord</th>
+                <th sortby="count">CountOf</th>
+                <th sortby="length">NumberOfLetters</th>
+                <th sortby="lengthU">NumberOfUndefinedLetters</th>
+              </tr>
+            </thead>
+          </table>
+          <div style="overflow: auto; height: 95%;">
+            <table>
+            <tbody id="tbody"></tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="obj-mh-letters" class="panel-obj">
+          <div id="letters-input">
+            <div style="width: fit-content; margin:auto;">
+              <label>Replace Letter</label>
+              <select id="select-replace"></select>
+              <label>with</label>
+              <select id="select-with"></select>
+              <button  id="btn-add-replace">OK</button>
+            </div>
+          </div>
+          <div id="letters-history">
+            <table>
+            <thead>
+              <tr>
+                <th>Replace</th>
+                <th>Founded</th>
+                <th>With</th>
+              </tr>
+            </thead>
+            </table>
+            <table>
+            <tbody>
+            </tbody>
+            </table>
+          </div>
+      </div>
+
+      <div id="obj-mh-crypto" class="panel-obj">
+        <div class="area-container">
+          <h2 for="crypto">CryptoText</h2>
+          <textarea name="crypto" disabled></textarea>
+        </div>
+        <div class="area-container">
+          <h2 for="encrypto">EncryptoText</h2>
+          <textarea name="encrypto" disabled></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="js/cryptodata.js" charset="utf-8"></script>
+    <script src="js/crypto.js" charset="utf-8"></script>
+    <script src="js/site.js" charset="utf-8"></script>
+    <script src="js/Chart.min.js" charset="utf-8"></script>
+
+  </body>
+</html>
