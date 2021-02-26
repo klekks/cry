@@ -21,7 +21,7 @@ window.onload = function () {
     active_menu = parts[$(event.target).attr("name")];
     active_menu.toggleClass("active");
   });
-  
+
 
   if (crypto_text == "") file_loader.show(300);
 
@@ -79,4 +79,6 @@ window.onload = function () {
     $("#select-width").val("A");
     ReplaceLetter(replace, _with);
   });
+
+  $("#autocomplete").on("click", AutoUpdate);
 };
